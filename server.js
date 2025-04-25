@@ -35,6 +35,9 @@ app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
   });
+app.use((req, res) => {
+    res.status(200).send('Youpii!');
+  });
 
 const PORT = process.env.PORT || 5000;
 
